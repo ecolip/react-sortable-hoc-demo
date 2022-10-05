@@ -17,19 +17,28 @@ type IndexProp = {
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  row-gap: 30px;
+  justify-content: flex-start;
+  overflow: auto;
+  gap: 30px calc((100% - 48%*2));
+  @media (min-width: 1200px){
+    gap: 30px calc((100% - 32%*3) / 2);
+  }
 `;
 const Item = styled.div`
   width: 48%;
-  height: 150px;
+  height: 180px;
   background-color:#eee;
   border: 1px solid #333;
+  @media (min-width: 1200px){
+    width: 32%;
+  }
 `;
 
-const Data = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6'];
+const Data = [
+'Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5',
+'Item 6', 'Item 7', 'Item 8', 'Item 9', 'Item 10',
+'Item 11', 'Item 12', 'Item 13', 'Item 14',
+];
 
 const SortableItem = SortableElement<ElementProp>(({value}:ElementProp) => <Item>{value}</Item>);
 
