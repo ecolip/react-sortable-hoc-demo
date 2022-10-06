@@ -18,9 +18,13 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   overflow: auto;
+  margin-left: -10px;
+  margin-right: -10px;
 `;
 const ItemWrapper = styled.div`
-  padding: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
 `;
 const Item = styled.div`
   width: 100%;
